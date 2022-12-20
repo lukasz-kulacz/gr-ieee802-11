@@ -115,7 +115,7 @@ blocks:
       5910000000.0, 5920000000.0]'
     orient: Qt.QVBoxLayout
     type: real
-    value: '5890000000'
+    value: '5900000000'
     widget: combo_box
   states:
     bus_sink: false
@@ -166,7 +166,7 @@ blocks:
     options: '[0, 1, 2]'
     orient: Qt.QVBoxLayout
     type: real
-    value: '0'
+    value: 6e6
     widget: combo_box
   states:
     bus_sink: false
@@ -258,9 +258,25 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [496, 208.0]
+    coordinate: [584, 216.0]
     rotation: 0
     state: enabled
+- name: blocks_complex_to_mag_squared_1
+  id: blocks_complex_to_mag_squared
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [296, 128.0]
+    rotation: 0
+    state: true
 - name: blocks_conjugate_cc_0
   id: blocks_conjugate_cc
   parameters:
@@ -276,6 +292,21 @@ blocks:
     coordinate: [440, 328.0]
     rotation: 0
     state: enabled
+- name: blocks_correctiq_0
+  id: blocks_correctiq
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [320, 176.0]
+    rotation: 0
+    state: true
 - name: blocks_delay_0
   id: blocks_delay
   parameters:
@@ -311,7 +342,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [280, 312.0]
+    coordinate: [280, 320.0]
     rotation: 0
     state: enabled
 - name: blocks_divide_xx_0
@@ -349,7 +380,25 @@ blocks:
     bus_structure: null
     coordinate: [768, 908]
     rotation: 180
-    state: disabled
+    state: enabled
+- name: blocks_file_sink_1
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: test.bin
+    type: float
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [968, 92.0]
+    rotation: 0
+    state: true
 - name: blocks_moving_average_xx_0
   id: blocks_moving_average_xx
   parameters:
@@ -390,6 +439,26 @@ blocks:
     coordinate: [808, 284.0]
     rotation: 0
     state: enabled
+- name: blocks_moving_average_xx_2
+  id: blocks_moving_average_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    length: '1000'
+    max_iter: '4000'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: 1e-3
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [496, 108.0]
+    rotation: 0
+    state: true
 - name: blocks_multiply_xx_0
   id: blocks_multiply_xx
   parameters:
@@ -408,6 +477,24 @@ blocks:
     coordinate: [664, 296]
     rotation: 0
     state: enabled
+- name: blocks_nlog10_ff_0
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '-30'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '10'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [872, 108.0]
+    rotation: 0
+    state: true
 - name: blocks_stream_to_vector_0
   id: blocks_stream_to_vector
   parameters:
@@ -447,6 +534,25 @@ blocks:
     coordinate: [168, 672]
     rotation: 0
     state: enabled
+- name: fir_filter_xxx_0
+  id: fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decim: '1000'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_delay: '0'
+    taps: '[1]'
+    type: fff
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [688, 116.0]
+    rotation: 0
+    state: true
 - name: foo_wireshark_connector_0
   id: foo_wireshark_connector
   parameters:
@@ -463,7 +569,7 @@ blocks:
     bus_structure: null
     coordinate: [952, 916]
     rotation: 180
-    state: disabled
+    state: enabled
 - name: ieee802_11_decode_mac_0
   id: ieee802_11_decode_mac
   parameters:
@@ -471,7 +577,7 @@ blocks:
     alias: ''
     comment: ''
     debug: 'False'
-    log: 'True'
+    log: 'False'
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
@@ -507,7 +613,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    debug: 'True'
+    debug: 'False'
     log: 'False'
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -761,6 +867,103 @@ blocks:
     coordinate: [1164, 520]
     rotation: 270
     state: enabled
+- name: qtgui_time_sink_x_1
+  id: qtgui_time_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: blue
+    color10: dark blue
+    color2: red
+    color3: green
+    color4: black
+    color5: cyan
+    color6: magenta
+    color7: yellow
+    color8: dark red
+    color9: dark green
+    comment: ''
+    ctrlpanel: 'False'
+    entags: 'True'
+    grid: 'True'
+    gui_hint: ''
+    label1: Signal 1
+    label10: Signal 10
+    label2: Signal 2
+    label3: Signal 3
+    label4: Signal 4
+    label5: Signal 5
+    label6: Signal 6
+    label7: Signal 7
+    label8: Signal 8
+    label9: Signal 9
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '""'
+    nconnections: '1'
+    size: '20000'
+    srate: samp_rate
+    stemplot: 'False'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    tr_chan: '0'
+    tr_delay: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: float
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ylabel: Amplitude
+    ymax: '-20'
+    ymin: '-100'
+    yunit: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [896, 220.0]
+    rotation: 0
+    state: true
 - name: uhd_usrp_source_0
   id: uhd_usrp_source
   parameters:
@@ -1201,7 +1404,12 @@ blocks:
 connections:
 - [blocks_complex_to_mag_0, '0', blocks_divide_xx_0, '0']
 - [blocks_complex_to_mag_squared_0, '0', blocks_moving_average_xx_0, '0']
+- [blocks_complex_to_mag_squared_1, '0', blocks_moving_average_xx_2, '0']
 - [blocks_conjugate_cc_0, '0', blocks_multiply_xx_0, '1']
+- [blocks_correctiq_0, '0', blocks_complex_to_mag_squared_0, '0']
+- [blocks_correctiq_0, '0', blocks_complex_to_mag_squared_1, '0']
+- [blocks_correctiq_0, '0', blocks_delay_0_0, '0']
+- [blocks_correctiq_0, '0', blocks_multiply_xx_0, '0']
 - [blocks_delay_0, '0', ieee802_11_sync_long_0, '1']
 - [blocks_delay_0_0, '0', blocks_conjugate_cc_0, '0']
 - [blocks_delay_0_0, '0', ieee802_11_sync_short_0, '0']
@@ -1210,9 +1418,13 @@ connections:
 - [blocks_moving_average_xx_0, '0', blocks_divide_xx_0, '1']
 - [blocks_moving_average_xx_1, '0', blocks_complex_to_mag_0, '0']
 - [blocks_moving_average_xx_1, '0', ieee802_11_sync_short_0, '1']
+- [blocks_moving_average_xx_2, '0', fir_filter_xxx_0, '0']
 - [blocks_multiply_xx_0, '0', blocks_moving_average_xx_1, '0']
+- [blocks_nlog10_ff_0, '0', blocks_file_sink_1, '0']
+- [blocks_nlog10_ff_0, '0', qtgui_time_sink_x_1, '0']
 - [blocks_stream_to_vector_0, '0', fft_vxx_0, '0']
 - [fft_vxx_0, '0', ieee802_11_frame_equalizer_0, '0']
+- [fir_filter_xxx_0, '0', blocks_nlog10_ff_0, '0']
 - [foo_wireshark_connector_0, '0', blocks_file_sink_0, '0']
 - [ieee802_11_decode_mac_0, out, foo_wireshark_connector_0, in]
 - [ieee802_11_decode_mac_0, out, ieee802_11_parse_mac_0, in]
@@ -1222,10 +1434,7 @@ connections:
 - [ieee802_11_sync_short_0, '0', blocks_delay_0, '0']
 - [ieee802_11_sync_short_0, '0', ieee802_11_sync_long_0, '0']
 - [pdu_pdu_to_tagged_stream_0, '0', qtgui_const_sink_x_0, '0']
-- [uhd_usrp_source_0, '0', blocks_complex_to_mag_squared_0, '0']
-- [uhd_usrp_source_0, '0', blocks_delay_0_0, '0']
-- [uhd_usrp_source_0, '0', blocks_multiply_xx_0, '0']
+- [uhd_usrp_source_0, '0', blocks_correctiq_0, '0']
 
 metadata:
   file_format: 1
-  grc_version: v3.10.2.0-68-g62a7e451

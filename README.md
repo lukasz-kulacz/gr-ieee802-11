@@ -16,6 +16,8 @@ simulations.
 
 1. [Further information](#further-information)
 
+1. [Useful commands](#useful-commands)
+
 # Development
 
 Like GNU Radio, this module uses *maint* branches for development.
@@ -84,7 +86,7 @@ clearer transceiver structure in GNU Radio Companion. This hierarchical block is
 not included in the installation process. You have to open
 ```/examples/wifi_phy_hier.grc``` with GNU Radio Companion and build it. This
 will install the block in ```~/.grc_gnuradio/```.
-
+```
 
 ### Check message port connections
 
@@ -216,3 +218,7 @@ of the TUN/TAP interface is handled by the scripts in the ```apps``` folder.
 
 For further information please checkout our project page
 [https://www.wime-project.net](https://www.wime-project.net)
+
+# Useful commands
+mkfifo /tmp/wifi.pcap
+sudo wireshark -k -i /tmp/wifi.pcap
